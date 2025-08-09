@@ -11,6 +11,7 @@ import Main from './Pages/Main';
 import Home from './Pages/Home/Home';
 import BookDetail from './Pages/BookDetail/BookDetail';
 import ListedBooks from './Pages/ListedBooks/ListedBooks';
+import BookPageChart from './Pages/BookPageChart/BookPageChart';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     {
       path:'library',
       element:<ListedBooks></ListedBooks>,
+    },
+    {
+      path:'page-to-read',
+      element:<BookPageChart></BookPageChart>
     },
    
     

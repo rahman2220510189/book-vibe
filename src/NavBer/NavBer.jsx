@@ -5,7 +5,7 @@ const Navber = () => {
     const content = <>
     <li className='gap-10 hover:font-bold hover:text-[#23BE0A]'>  <NavLink to= '/'> Home</NavLink></li>
     <li className='gap-10 hover:font-bold hover:text-[#23BE0A]'> <NavLink to ='/library'>Listed Books</NavLink></li>
-    <li className='gap-10 hover:font-bold hover:text-[#23BE0A]'><NavLink>Pages to Read</NavLink></li>
+    <li className='gap-10 hover:font-bold hover:text-[#23BE0A]'><NavLink to='/page-to-read'>Pages to Read</NavLink></li>
     
     </>
     return (
