@@ -10,6 +10,7 @@ import React from 'react';
 import Main from './Pages/Main';
 import Home from './Pages/Home/Home';
 import BookDetail from './Pages/BookDetail/BookDetail';
+import ListedBooks from './Pages/ListedBooks/ListedBooks';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +24,13 @@ const router = createBrowserRouter([
       path: 'books/:bookId',
       element:<BookDetail></BookDetail>,
     },
+    {
+      path:'library',
+      element:<ListedBooks></ListedBooks>,
+    },
+   
+    
+ 
     ],
   },
 ]);
