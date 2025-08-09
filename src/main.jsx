@@ -9,12 +9,16 @@ import {
 import React from 'react';
 import Navber from './NavBer/Navber';
 import Main from './Pages/Main';
+import Home from './Pages/Home/Home';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
     children: [
-  
+    {
+      path:'/',
+      element:<Home></Home>,
+    },
     ],
   },
 ]);
