@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import book from '../../assets/books.jpg'
 import BookCard from "../BookCard";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const bottomSectionRef = useRef(null);
@@ -18,7 +19,7 @@ const Home = () => {
         bottomSectionRef.current.scrollIntoView({ behavior: "smooth" })
     };
 
-    
+
     return (
         <div>
 
@@ -54,15 +55,17 @@ const Home = () => {
                     <h2 className="text-3xl font-bold mb-10 text-center">
                         Our Book Collection
                     </h2>
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {
-                         
-                          books.map((book, index) =>(
-                            <BookCard key ={index} book ={book}></BookCard>
-                          )) 
+                            books.map((book) => (
+                                <Link key={book.bookId} to={`books/${book.bookId}`}>
+                                    <BookCard book={book} />
+                                </Link>
+                            ))
                         }
-
                     </div>
+
 
                 </div>
 
